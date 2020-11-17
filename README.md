@@ -3,6 +3,7 @@
 ## Structure
 
 - `/app` - application code
+- `/file-sink-connector` - Kafka Sink Connector app
 - `/results` - results with screenshots
 
 ## Installation
