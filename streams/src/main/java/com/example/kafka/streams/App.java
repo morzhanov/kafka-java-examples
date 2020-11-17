@@ -1,8 +1,7 @@
 package com.example.kafka.streams;
 
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Calendar;
+import java.time.Instant;
 import java.util.Properties;
 
 import org.apache.kafka.common.serialization.Serdes;
@@ -88,10 +87,11 @@ public class App {
 
 	private static KeyValue<String, String> aggregate(Windowed<String> key, Long count) {
 		try {
-			GithubEventAggregate ag = new GithubEventAggregate("PushEvent", key.window().startTime().toString(),
-					key.window().endTime().toString(), count,
-					new SimpleDateFormat("YYYY-MM-DDTHH:mm:ss").format(Calendar.getInstance().getTime()));
-			JSONObject res = new JSONObject(ag);
+			JSONObject res = new JSONObject();
+			res.put("eventType", "PushEvent");
+			res.put("startTimestamp", key.window().startTime().toString());
+			res.put("endTimestamp", key.window().endTime().toString());
+			res.put("createdAt", Instant.now().toString());
 			return new KeyValue<String, String>(key.key(), res.toString());
 		} catch (JSONException e) {
 			e.printStackTrace();

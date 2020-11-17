@@ -22,7 +22,7 @@ public class KafkaService {
             ObjectMapper mapper = new ObjectMapper();
             try {
                 String json = mapper.writeValueAsString(e);
-                this.kafkaTemplate.send(TOPIC, json);
+                this.kafkaTemplate.send(TOPIC, "1", json);
             } catch (JsonProcessingException err) {
                 err.printStackTrace();
             }
