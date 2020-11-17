@@ -4,6 +4,7 @@
 
 - `/app` - application code
 - `/file-sink-connector` - Kafka Sink Connector app
+- `/streams` - Kafka Streams app
 - `/results` - results with screenshots
 
 ## Installation
