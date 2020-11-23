@@ -1,4 +1,4 @@
-# Task 2 results
+# Task 2 results (Kafka)
 
 1. Added base code for controller and kafka service
 

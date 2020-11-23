@@ -1,4 +1,4 @@
-# Task 3 results
+# Task 3 results (Connect)
 
 1. Created base app for FileSink connector. Added FileSinkConnectorConfig
 

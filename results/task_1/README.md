@@ -1,4 +1,4 @@
-# Task 1 results
+# Task 1 results (Setup)
 
 1. Deployed Kafka cluster locally. Added topic and published some data via kafkacat
 

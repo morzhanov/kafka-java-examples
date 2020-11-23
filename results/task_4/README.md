@@ -1,4 +1,4 @@
-# Task 3 results
+# Task 4 results (Streams)
 
 1. Created GitHubEvents topic
 
